@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Learning</title>
+</head>
+<body>
+
+    <h1>LEARNING JS</h1>
+
+    <button id="btn">Say My Name</button>
+</body>
+
+<script>
+    // const alt=function(){
+    //     console.log("MY NAME IS SHIVAM")
+    // }
+    // setTimeout(alt,2000)
+
+    // const changeText=function(){
+    //     document.getElementById('btn').innerHTML="Your Goddam Right !"
+    // }
+    // const changeTextSet=setTimeout(changeText,10000)
+
+    // clearTimeout(changeTextSet)
+
+    const freqMsg=function(str){
+        console.log(`My Name is Shivam ${str}`)
+    }
+
+    const clearTimefreqMsg=setInterval(freqMsg,2000,"MF");
+
+    clearInterval(clearTimefreqMsg)
+
+      
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+</head>
+<body>
+    <h1>Magic</h1>
+
+    <button id="start"> Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+    const randomColor=function()
+    {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+
+        for(let i=0;i<6;i++)
+    {
+        color+=hex[Math.floor(Math.random() * 16 )];
+    }
+    
+    return color;    
+    }
+
+
+    let col
+
+    const setColor=function(){
+        function adding ()
+        {
+             document.body.style.backgroundColor=randomColor();
+        }
+        col=setInterval(adding,1000)
+       
+    }
+
+    const stopColor=function(){
+
+        clearInterval(col)
+    }
+        document.getElementById("start").addEventListener('click', setColor)
+
+        document.getElementById("stop").addEventListener('click',stopColor)
+
+    
+
+    
+
+
+
+
+
+
+
+</script>
+</html>
